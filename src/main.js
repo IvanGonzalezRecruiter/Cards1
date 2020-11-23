@@ -2,9 +2,24 @@
 import "bootstrap";
 import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  console.log("Hello Rigo from the console!");
+  let suits = ["heart", "diamond", "spade", "club"];
+
+  let value = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
+
+  // Always returns a random number between min and max (both included)
+  function getRndInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+  let card = document.querySelector(".card");
+  let cardValue = document.querySelector("h1");
+
+  /*
+  classList accesses css classes and reflects it on DOM via add
+  */
+  card.classList.add(suits[getRndInt(0, suits.length)]);
+  cardValue.innerHTML = value[getRndInt(0, value.length)];
 };

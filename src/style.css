@@ -1,1 +1,66 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500&display=swap");
+
+* {
+  font-size: 10px;
+}
+
+body {
+  background: green;
+}
+
+.card {
+  background: #fff;
+  width: 250px;
+  height: 350px;
+}
+
+/* affects suit placement */
+.card::after,
+.card::before {
+  position: absolute;
+  font-size: 3rem;
+}
+
+/* suit placement top */
+.card::after {
+  top: 0;
+  left: 0;
+}
+
+/* suit placement bottom */
+.card::before {
+  bottom: 0;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.heart::after,
+.heart::before {
+  content: "\2665";
+}
+
+.spade::after,
+.spade::before {
+  content: "\2660";
+}
+
+.club::after,
+.club::before {
+  content: "\2663";
+}
+
+.diamond::after,
+.diamond::before {
+  content: "\2666";
+}
+
+.heart,
+.diamond {
+  color: red;
+}
+
+h1 {
+  font-size: 8rem;
+  font-family: "Frank Ruhl Libre", serif;
+}
