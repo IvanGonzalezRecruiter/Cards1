@@ -17,9 +17,22 @@ window.onload = function() {
   let card = document.querySelector(".card");
   let cardValue = document.querySelector("h1");
 
-  /*
-  classList accesses css classes and reflects it on DOM via add
-  */
-  card.classList.add(suits[getRndInt(0, suits.length)]);
+  // classList accesses css classes and reflects it on DOM via add
   cardValue.innerHTML = value[getRndInt(0, value.length)];
+
+  card.classList.add(suits[getRndInt(0, suits.length)]);
+
+  document.querySelector(".btn").textContent = "Deal";
+
+  document.querySelector(".btn").addEventListener("click", function() {
+    for (let i = 0; i < suits.length; i++) {
+      if (card.classList.contains(suits[i])) {
+        card.classList.remove(suits[i]);
+
+        card.classList.add(suits[getRndInt(0, suits.length)]);
+      }
+    }
+
+    cardValue.innerHTML = value[getRndInt(0, value.length)];
+  });
 };
