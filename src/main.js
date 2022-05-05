@@ -7,7 +7,7 @@ import "./assets/img/4geeks.ico";
 window.onload = function() {
   let palos = ["heart", "diamond", "spade", "club"];
 
-  let value = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
+  let value = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "AS"];
 
   function getRndInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
