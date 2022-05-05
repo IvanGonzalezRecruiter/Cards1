@@ -25,20 +25,17 @@ body {
   height: 350px;
 }
 
-/* affects suit placement */
 .card::after,
 .card::before {
   position: absolute;
   font-size: 3rem;
 }
 
-/* suit placement top */
 .card::after {
   top: 0;
   left: 0;
 }
 
-/* suit placement bottom */
 .card::before {
   bottom: 0;
   right: 0;
