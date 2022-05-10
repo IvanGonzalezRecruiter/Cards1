@@ -5,7 +5,7 @@ import "./style.css";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  let palos = ["heart", "diamond", "spade", "club"];
+  let palos = ["corazon", "diamante", "pica", "trebol"];
 
   let value = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "AS"];
 
